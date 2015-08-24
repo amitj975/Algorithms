@@ -4,6 +4,9 @@ BFS and DFS Implentation
 */
 
 
+// Solution of www.spoj.com/problems/TDBFS
+
+
 #include<iostream>
 #include<stack>
 #include<vector>
@@ -93,6 +96,7 @@ void  graph::bfs(int root){
 }
 
 int main(){
+
 ios_base::sync_with_stdio(false);
 
 int t,n,temp,temp2,m;
@@ -111,6 +115,9 @@ for(int f=0;f<t;f++){
             }
         }
         cout<<"graph "<<f+1<<endl;
+
+
+
         while(1){
             cin>>temp;
             cin>>temp2;
@@ -119,10 +126,10 @@ for(int f=0;f<t;f++){
                 break;
 
             if(temp2==1){
-                g.bfs(temp);
+                g.bfs(temp);			// bfs call from temp
             }
             else{
-                g.dfs(temp);
+                g.dfs(temp);			// dfs call from temp
             }
         }
 }
